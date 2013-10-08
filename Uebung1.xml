@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<company>
+	<employees>
+		<employee id="1">
+			<name>Damian Marley</name>
+			<email>damian@marley.com</email>
+		</employee>
+		
+		<employee id="2">
+			<name>Alicia Keys</name>
+			<email>alicia@keys.net</email>
+		</employee>
+		
+		<employee id="3">
+			<name>Thom Yorke</name>
+			<email>thom.yorke@radio.co.uk</email>
+		</employee>
+		
+		<employee id="4">
+			<name>Bono</name>
+			<email>bono@u.too</email>
+		</employee>
+	
+	</employees>
+	
+	<projects>
+		<project>
+			<name>P1</name>
+			<duration unit="month">5</duration>
+			<members>
+				<employeeRef idref="1"/>
+				<employeeRef idref="2"/>
+				<employeeRef idref="3"/>
+			</members>
+		</project>
+	
+		<project>
+			<name>P2</name>
+			<duration unit="month">2</duration>
+			<members>
+				<employeeRef idref="3"/>
+				<employeeRef idref="4"/>
+			</members>
+		</project>
+		
+		<project>
+			<name>P3</name>
+			<duration unit="month">6</duration>
+			<members>
+				<employeeRef idref="2"/>
+				<employeeRef idref="3"/>
+				<employeeRef idref="4"/>
+			</members>
+		</project>
+	</projects>
+
+</company>

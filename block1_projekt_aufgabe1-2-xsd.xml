@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+
+ * Written by Fabian Kuenzli
+ * University of Applied Sciences of Northwestern Switzerland, FHNW
+ * Computer Science, iCompetence
+ * (c) 2013
+
+-->
+
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="urn:dbc.fkuenzli"
+		   xmlns="urn:dbc.fkuenzli"
+		   elementFormDefault="qualified">
+
+	<xsd:element name="zhaw">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="configuration" type="configuration"/>
+
+				<xsd:element name="persons">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="person" type="person" maxOccurs="unbounded" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+
+				<xsd:element name="projects">
+					<xsd:complexType>
+						<xsd:all>
+							<xsd:element name="project" type="project" />
+						</xsd:all>
+					</xsd:complexType>
+
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:complexType name="configuration">
+		<xsd:sequence>
+			<xsd:element name="images" type="images"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="images">
+		<xsd:sequence>
+			<xsd:element name="url" type="xsd:anyURI"/>
+			<xsd:element name="width" type="xsd:integer"/>
+			<xsd:element name="height" type="xsd:integer"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="person">
+		<xsd:all>
+			<xsd:element name="firstname" type="xsd:string"/>
+			<xsd:element name="lastname" type="xsd:string"/>
+			<xsd:element name="email" type="xsd:string"/>
+			<xsd:element name="website" type="xsd:anyURI"/>
+			<xsd:element name="kuerzel" type="xsd:string"/>
+			<xsd:element name="googlemaps" type="googlemaps"/>
+			<xsd:element name="facebook" type="xsd:anyURI" />
+			<xsd:element name="skype" type="xsd:string"/>
+			<xsd:element name="twitter" type="xsd:string"/>
+		</xsd:all>
+		<xsd:attribute name="id" type="xsd:integer"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="googlemaps">
+		<xsd:attribute name="longitude" type="xsd:float"/>
+		<xsd:attribute name="latitude" type="xsd:float"/>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="project">
+		<xsd:all>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="duration" type="duration" />
+
+			<xsd:element name="members">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="personRef" type="personReference" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="revenue" type="xsd:float"/>
+
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="duration">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:integer">
+				<xsd:attribute name="unit" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="personReference">
+		<xsd:attribute name="idRef" type="xsd:integer"/>
+	</xsd:complexType>
+
+
+
+</xsd:schema>

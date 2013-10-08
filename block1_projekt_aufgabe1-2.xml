@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="projekt.xsl"?>
+
+<!--
+
+ * Written by Fabian Kuenzli
+ * University of Applied Sciences of Northwestern Switzerland, FHNW
+ * Computer Science, iCompetence
+ * (c) 2013
+
+-->
+
+<zhaw
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="urn:dbc.fkuenzli"
+		xsi:schemaLocation="urn:dbc.fkuenzli block1_projekt_aufgabe1-2-xsd.xml"
+		>
+
+	<configuration>
+		<images>
+			<url>http://pd.zhaw.ch/portraet/images/</url>
+			<width>300</width>
+			<height>300</height>
+		</images>
+	</configuration>
+	
+	<persons>
+		<person id="1">
+			<firstname>Damian</firstname>
+			<lastname>Marley</lastname>
+			<email>damian@marley.com</email>
+			<website>www.marley.com</website>
+			<kuerzel>dama</kuerzel>
+			<googlemaps longitude="47.481176" latitude="8.21171"/>
+			<facebook>http://www.facebook.com/damianmarley</facebook>
+			<skype>d.marley</skype>
+			<twitter>damianmarley</twitter>
+		</person>
+		<person id="2">
+			<firstname>Damian</firstname>
+			<lastname>Marley</lastname>
+			<email>damian@marley.com</email>
+			<website>www.marley.com</website>
+			<kuerzel>dama</kuerzel>
+			<googlemaps longitude="47.481176" latitude="8.21171"/>
+			<facebook>http://www.facebook.com/damianmarley</facebook>
+			<skype>d.marley</skype>
+			<twitter>damianmarley</twitter>
+		</person>
+		<person id="3">
+			<firstname>Damian</firstname>
+			<lastname>Marley</lastname>
+			<email>damian@marley.com</email>
+			<website>www.marley.com</website>
+			<kuerzel>dama</kuerzel>
+			<googlemaps longitude="47.481176" latitude="8.21171"/>
+			<facebook>http://www.facebook.com/damianmarley</facebook>
+			<skype>d.marley</skype>
+			<twitter>damianmarley</twitter>
+		</person>
+	</persons>
+	
+	<projects>
+		<project>
+			<name>P1</name>
+			<duration unit="day">5</duration>
+			<members>
+				<personRef idRef="1"/>
+				<personRef idRef="2"/>
+				<personRef idRef="3"/>
+			</members>
+			<revenue>100</revenue>
+		</project>
+	</projects>
+</zhaw>

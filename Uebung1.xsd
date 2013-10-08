@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="company" type="companyType"/>
+  <xs:complexType name="membersType">
+    <xs:sequence>
+      <xs:element type="employeeRefType" name="employeeRef" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="employeeType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Damian Marley"/>
+            <xs:enumeration value="Alicia Keys"/>
+            <xs:enumeration value="Thom Yorke"/>
+            <xs:enumeration value="Bono"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="damian@marley.com"/>
+            <xs:enumeration value="alicia@keys.net"/>
+            <xs:enumeration value="thom.yorke@radio.co.uk"/>
+            <xs:enumeration value="bono@u.too"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="employeeRefType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="idref" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="projectsType">
+    <xs:sequence>
+      <xs:element type="projectType" name="project" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="companyType">
+    <xs:sequence>
+      <xs:element type="employeesType" name="employees"/>
+      <xs:element type="projectsType" name="projects"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="projectType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="P1"/>
+            <xs:enumeration value="P2"/>
+            <xs:enumeration value="P3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="durationType" name="duration"/>
+      <xs:element type="membersType" name="members"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="durationType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="unit" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="employeesType">
+    <xs:sequence>
+      <xs:element type="employeeType" name="employee" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
