@@ -16,45 +16,84 @@
 
 	<xsl:output
 		method="html"
-		version="4.0"
+		version="5.0"
 		encoding="UTF-8"
 		indent="yes" />
 
+	<xsl:key name="personReference" match="d:zhaw/d:projects/d:project/d:members/d:personRef" use="@idRef"/>
+	
 	<xsl:template match="/">
 
 		<html>
+			<head>
+				<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+				<link href="css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
+				<link href="css/style.css" rel="stylesheet"/>
+			</head>
 
 			<body>
-				<table>
-					<tr>
-						<th>Name</th>
-						<th></th>
-						<th>Social Media</th>
-						<th>Skype</th>
-						<th>Adresse</th>
-					</tr>
-					<xsl:for-each select="d:zhaw/d:persons/d:person">
-						<tr>
-							<td>
-								<a href="mailto:{d:email}"><xsl:value-of select="d:lastname"/></a>
-							</td>
-							<td>
-								<img src="{d:kuerzel}" width="" height=""></img>
-							</td>
-							<td>
-								<a href="https://twitter.com/{twitter}">twitter ({d:twitter})</a><br />
-								<a href="{d:facebook}">Facebook</a>
-							</td>
-							<td>
-								<a href="skype:{d:skype}">Skype</a>
-							</td>
-							<td>
-								Longitude: <xsl:value-of select="d:googlemaps/@longitude"/> <br />
-								Latitude: <xsl:value-of select="d:googlemaps/@latitude"/>
-							</td>
-						</tr>
-					</xsl:for-each>
-				</table>
+				<container>
+					<row>
+						<h1><img src="img/zhaw_logo.png" alt="ZHAW Logo"/>ZHAW Personenregister</h1>
+						<table class="table table-striped">
+							<tr>
+								<th>Name</th>
+								<th></th>
+								<th>Social Media</th>
+								<th>Skype</th>
+								<th>Adresse</th>
+								<th>Projekte</th>
+								<th>Projektumsatz</th>
+							</tr>
+							<xsl:for-each select="d:zhaw/d:persons/d:person">
+								<tr>
+									<td>
+										<a href="mailto:{d:email}"><xsl:value-of select="d:firstname"/> <xsl:value-of select="d:lastname"/></a>
+									</td>
+									<td>
+										<img class="img-thumbnail" src="{/d:zhaw/d:configuration/d:images/d:url}{d:kuerzel}.{/d:zhaw/d:configuration/d:images/d:fileextension}" width="{/d:zhaw/d:configuration/d:images/d:width}" height="{/d:zhaw/d:configuration/d:images/d:height}"/>
+									</td>
+									<td>
+										<a href="https://twitter.com/{d:twitter}"><span class="glyphicon glyphicon-link"></span> twitter (@<xsl:value-of select="d:twitter"/>)</a><br />
+										<a href="{d:facebook}"><span class="glyphicon glyphicon-link"></span> Facebook</a>
+									</td>
+									<td>
+										<a href="skype:{d:skype}"><span class="glyphicon glyphicon-earphone"></span>&#160;<xsl:value-of select="d:skype"/></a>
+									</td>
+									<td><a href="http://maps.google.com/maps?q={d:googlemaps/@longitude},{d:googlemaps/@latitude}&#038;ll={d:googlemaps/@longitude},{d:googlemaps/@latitude}&#038;z=17" target="_blank"><span class="glyphicon glyphicon-map-marker"></span>Karte</a>
+									</td>
+
+									<td>
+										<ul>
+											<xsl:for-each select="key('personReference', @id)">
+												<li><xsl:value-of select="../../d:name"/></li>
+											</xsl:for-each>
+										</ul>
+
+									</td>
+
+									<td>
+										<xsl:variable name="projectRevenuePerMember" select="key('personReference', @id)/../../d:revenue"/>
+										
+										<xsl:choose>
+											<xsl:when test="sum($projectRevenuePerMember) &gt; 499">
+												<span class="glyphicon glyphicon-arrow-up good"></span>
+											</xsl:when>
+											<xsl:when test="sum($projectRevenuePerMember) &gt; 299">
+												<span class="glyphicon glyphicon-arrow-right average"></span>
+											</xsl:when>
+											<xsl:otherwise>
+												<span class="glyphicon glyphicon-arrow-down bad"></span>
+											</xsl:otherwise>
+										</xsl:choose>
+
+										<xsl:value-of select="sum($projectRevenuePerMember)"/>
+									</td>
+								</tr>
+							</xsl:for-each>
+						</table>
+					</row>
+				</container>
 			</body>
 		</html>
 	</xsl:template>

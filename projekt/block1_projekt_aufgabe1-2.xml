@@ -19,8 +19,9 @@
 	<configuration>
 		<images>
 			<url>http://pd.zhaw.ch/portraet/images/</url>
-			<width>300</width>
-			<height>300</height>
+			<width>150</width>
+			<height>150</height>
+			<fileextension>jpg</fileextension>
 		</images>
 	</configuration>
 	
@@ -30,7 +31,7 @@
 			<lastname>Marley</lastname>
 			<email>damian@marley.com</email>
 			<website>www.marley.com</website>
-			<kuerzel>dama</kuerzel>
+			<kuerzel>mino</kuerzel>
 			<googlemaps longitude="47.481176" latitude="8.21171"/>
 			<facebook>http://www.facebook.com/damianmarley</facebook>
 			<skype>d.marley</skype>
@@ -41,7 +42,7 @@
 			<lastname>Marley</lastname>
 			<email>damian@marley.com</email>
 			<website>www.marley.com</website>
-			<kuerzel>dama</kuerzel>
+			<kuerzel>kell</kuerzel>
 			<googlemaps longitude="47.481176" latitude="8.21171"/>
 			<facebook>http://www.facebook.com/damianmarley</facebook>
 			<skype>d.marley</skype>
@@ -52,7 +53,62 @@
 			<lastname>Marley</lastname>
 			<email>damian@marley.com</email>
 			<website>www.marley.com</website>
-			<kuerzel>dama</kuerzel>
+			<kuerzel>desa</kuerzel>
+			<googlemaps longitude="47.481176" latitude="8.21171"/>
+			<facebook>http://www.facebook.com/damianmarley</facebook>
+			<skype>d.marley</skype>
+			<twitter>damianmarley</twitter>
+		</person>
+		<person id="4">
+			<firstname>Damian</firstname>
+			<lastname>Marley</lastname>
+			<email>damian@marley.com</email>
+			<website>www.marley.com</website>
+			<kuerzel>stuj</kuerzel>
+			<googlemaps longitude="47.481176" latitude="8.21171"/>
+			<facebook>http://www.facebook.com/damianmarley</facebook>
+			<skype>d.marley</skype>
+			<twitter>damianmarley</twitter>
+		</person>
+		<person id="4">
+			<firstname>Damian</firstname>
+			<lastname>Marley</lastname>
+			<email>damian@marley.com</email>
+			<website>www.marley.com</website>
+			<kuerzel>rubn</kuerzel>
+			<googlemaps longitude="47.481176" latitude="8.21171"/>
+			<facebook>http://www.facebook.com/damianmarley</facebook>
+			<skype>d.marley</skype>
+			<twitter>damianmarley</twitter>
+		</person>
+		<person id="5">
+			<firstname>Damian</firstname>
+			<lastname>Marley</lastname>
+			<email>damian@marley.com</email>
+			<website>www.marley.com</website>
+			<kuerzel>brck</kuerzel>
+			<googlemaps longitude="47.481176" latitude="8.21171"/>
+			<facebook>http://www.facebook.com/damianmarley</facebook>
+			<skype>d.marley</skype>
+			<twitter>damianmarley</twitter>
+		</person>
+		<person id="6">
+			<firstname>Damian</firstname>
+			<lastname>Marley</lastname>
+			<email>damian@marley.com</email>
+			<website>www.marley.com</website>
+			<kuerzel>kyka</kuerzel>
+			<googlemaps longitude="47.481176" latitude="8.21171"/>
+			<facebook>http://www.facebook.com/damianmarley</facebook>
+			<skype>d.marley</skype>
+			<twitter>damianmarley</twitter>
+		</person>
+		<person id="7">
+			<firstname>Damian</firstname>
+			<lastname>Marley</lastname>
+			<email>damian@marley.com</email>
+			<website>www.marley.com</website>
+			<kuerzel>coli</kuerzel>
 			<googlemaps longitude="47.481176" latitude="8.21171"/>
 			<facebook>http://www.facebook.com/damianmarley</facebook>
 			<skype>d.marley</skype>
@@ -62,7 +118,7 @@
 	
 	<projects>
 		<project>
-			<name>P1</name>
+			<name>Evaluation foo</name>
 			<duration unit="day">5</duration>
 			<members>
 				<personRef idRef="1"/>
@@ -70,6 +126,30 @@
 				<personRef idRef="3"/>
 			</members>
 			<revenue>100</revenue>
+		</project>
+		<project>
+			<name>Interne Umstrukturierung</name>
+			<duration unit="day">10</duration>
+			<members>
+				<personRef idRef="2"/>
+				<personRef idRef="3"/>
+				<personRef idRef="4"/>
+				<personRef idRef="5"/>
+				<personRef idRef="7"/>
+			</members>
+			<revenue>200</revenue>
+		</project>
+		<project>
+			<name>Tool foo</name>
+			<duration unit="day">20</duration>
+			<members>
+				<personRef idRef="1"/>
+				<personRef idRef="3"/>
+				<personRef idRef="4"/>
+				<personRef idRef="5"/>
+				<personRef idRef="6"/>
+			</members>
+			<revenue>300</revenue>
 		</project>
 	</projects>
 </zhaw>

@@ -1,0 +1,19 @@
+h1 img {
+	margin: 20px;
+}
+
+.glyphicon {
+	margin-right: 10px;
+}
+
+.good {
+	color: #5cb85c;
+}
+
+.average {
+	color: #428bca;
+}
+
+.bad {
+	color: #d2322d;
+}

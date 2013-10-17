@@ -39,9 +39,9 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="projects">
-		<xsd:all>
-			<xsd:element name="project" type="project" />
-		</xsd:all>
+		<xsd:sequence>
+			<xsd:element name="project" type="project" maxOccurs="unbounded" />
+		</xsd:sequence>
 	</xsd:complexType>
 	
 	<xsd:complexType name="images">
@@ -49,6 +49,7 @@
 			<xsd:element name="url" type="xsd:anyURI"/>
 			<xsd:element name="width" type="xsd:integer"/>
 			<xsd:element name="height" type="xsd:integer"/>
+			<xsd:element name="fileextension" type="xsd:string"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
