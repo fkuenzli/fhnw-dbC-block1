@@ -20,6 +20,7 @@
 		encoding="UTF-8"
 		indent="yes" />
 
+	<!-- get person references per project -->
 	<xsl:key name="personReference" match="d:zhaw/d:projects/d:project/d:members/d:personRef" use="@idRef"/>
 	
 	<xsl:template match="/">
@@ -65,6 +66,7 @@
 
 									<td>
 										<ul>
+											<!-- get projects names per employee -->
 											<xsl:for-each select="key('personReference', @id)">
 												<li><xsl:value-of select="../../d:name"/></li>
 											</xsl:for-each>
@@ -73,9 +75,11 @@
 									</td>
 
 									<td>
+										<!-- get revenues per person -->
 										<xsl:variable name="projectRevenuePerMember" select="key('personReference', @id)/../../d:revenue"/>
 										
 										<xsl:choose>
+											<!-- check how big the revenue of person's projects is -->
 											<xsl:when test="sum($projectRevenuePerMember) &gt; 499">
 												<span class="glyphicon glyphicon-arrow-up good"></span>
 											</xsl:when>
@@ -87,6 +91,7 @@
 											</xsl:otherwise>
 										</xsl:choose>
 
+										<!-- print sum of project revenues -->
 										<xsl:value-of select="sum($projectRevenuePerMember)"/>
 									</td>
 								</tr>
