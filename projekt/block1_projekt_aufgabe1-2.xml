@@ -6,6 +6,7 @@
  * Written by Fabian Kuenzli
  * University of Applied Sciences of Northwestern Switzerland, FHNW
  * Computer Science, iCompetence
+ * fabian.kuenzli@gmail.com
  * (c) 2013
 
 -->
@@ -27,99 +28,81 @@
 	
 	<persons>
 		<person id="1">
-			<firstname>Damian</firstname>
-			<lastname>Marley</lastname>
-			<email>damian@marley.com</email>
-			<website>www.marley.com</website>
+			<firstname>Clemente</firstname>
+			<lastname>Minonne</lastname>
+			<email>mino@zhaw.ch</email>
+			<website>http://www.zhaw.ch</website>
 			<kuerzel>mino</kuerzel>
-			<googlemaps longitude="47.481176" latitude="8.21171"/>
-			<facebook>http://www.facebook.com/damianmarley</facebook>
-			<skype>d.marley</skype>
-			<twitter>damianmarley</twitter>
+			<googlemaps longitude="47.497271" latitude="8.730029"/>
+			<skype>c.minonne</skype>
+			<twitter>cminonne</twitter>
 		</person>
 		<person id="2">
-			<firstname>Damian</firstname>
-			<lastname>Marley</lastname>
-			<email>damian@marley.com</email>
-			<website>www.marley.com</website>
+			<firstname>Thomas</firstname>
+			<lastname>Keller</lastname>
+			<email>kell@zhaw.ch</email>
+			<website>http://www.zhaw.ch</website>
 			<kuerzel>kell</kuerzel>
-			<googlemaps longitude="47.481176" latitude="8.21171"/>
-			<facebook>http://www.facebook.com/damianmarley</facebook>
-			<skype>d.marley</skype>
-			<twitter>damianmarley</twitter>
+			<googlemaps longitude="47.497271" latitude="8.730029"/>
+			<skype>t.keller</skype>
+			<twitter>tkeller</twitter>
 		</person>
 		<person id="3">
-			<firstname>Damian</firstname>
-			<lastname>Marley</lastname>
-			<email>damian@marley.com</email>
-			<website>www.marley.com</website>
+			<firstname>Alexandre</firstname>
+			<lastname>de Spindler</lastname>
+			<email>desa@zhaw.ch</email>
+			<website>http://www.zhaw.ch</website>
 			<kuerzel>desa</kuerzel>
-			<googlemaps longitude="47.481176" latitude="8.21171"/>
-			<facebook>http://www.facebook.com/damianmarley</facebook>
-			<skype>d.marley</skype>
-			<twitter>damianmarley</twitter>
+			<googlemaps longitude="47.378114" latitude="8.549744"/>
+			<skype>a.despindler</skype>
+			<twitter>despindler</twitter>
 		</person>
 		<person id="4">
-			<firstname>Damian</firstname>
-			<lastname>Marley</lastname>
-			<email>damian@marley.com</email>
-			<website>www.marley.com</website>
-			<kuerzel>stuj</kuerzel>
-			<googlemaps longitude="47.481176" latitude="8.21171"/>
-			<facebook>http://www.facebook.com/damianmarley</facebook>
-			<skype>d.marley</skype>
-			<twitter>damianmarley</twitter>
-		</person>
-		<person id="4">
-			<firstname>Damian</firstname>
-			<lastname>Marley</lastname>
-			<email>damian@marley.com</email>
-			<website>www.marley.com</website>
+			<firstname>Brian</firstname>
+			<lastname>Rüeger</lastname>
+			<email>rubn@zhaw.ch</email>
+			<website>http://www.zhaw.ch</website>
 			<kuerzel>rubn</kuerzel>
-			<googlemaps longitude="47.481176" latitude="8.21171"/>
-			<facebook>http://www.facebook.com/damianmarley</facebook>
-			<skype>d.marley</skype>
-			<twitter>damianmarley</twitter>
+			<googlemaps longitude="47.497271" latitude="8.730029"/>
+			<skype>b.rueeger</skype>
+			<twitter>brueeger</twitter>
 		</person>
 		<person id="5">
-			<firstname>Damian</firstname>
-			<lastname>Marley</lastname>
-			<email>damian@marley.com</email>
-			<website>www.marley.com</website>
+			<firstname>Elke</firstname>
+			<lastname>Brucker-Kley</lastname>
+			<email>brck@zhaw.ch</email>
+			<website>http://www.zhaw.ch</website>
 			<kuerzel>brck</kuerzel>
-			<googlemaps longitude="47.481176" latitude="8.21171"/>
-			<facebook>http://www.facebook.com/damianmarley</facebook>
-			<skype>d.marley</skype>
-			<twitter>damianmarley</twitter>
+			<googlemaps longitude="47.497271" latitude="8.730029"/>
+			<skype>e.brucker-kley</skype>
+			<twitter>ebruckerkley</twitter>
 		</person>
 		<person id="6">
-			<firstname>Damian</firstname>
-			<lastname>Marley</lastname>
-			<email>damian@marley.com</email>
-			<website>www.marley.com</website>
+			<firstname>Denisa</firstname>
+			<lastname>Kykalova</lastname>
+			<email>kyka@zhaw.ch</email>
+			<website>http://www.zhaw.ch</website>
 			<kuerzel>kyka</kuerzel>
-			<googlemaps longitude="47.481176" latitude="8.21171"/>
-			<facebook>http://www.facebook.com/damianmarley</facebook>
-			<skype>d.marley</skype>
-			<twitter>damianmarley</twitter>
+			<googlemaps longitude="47.497271" latitude="8.730029"/>
+			<skype>d.kykalova</skype>
+			<twitter>dkykalova</twitter>
 		</person>
 		<person id="7">
-			<firstname>Damian</firstname>
-			<lastname>Marley</lastname>
-			<email>damian@marley.com</email>
-			<website>www.marley.com</website>
+			<firstname>Carlo</firstname>
+			<lastname>Colicchio</lastname>
+			<email>coli@zhaw.ch</email>
+			<website>http://www.zhaw.ch</website>
 			<kuerzel>coli</kuerzel>
-			<googlemaps longitude="47.481176" latitude="8.21171"/>
-			<facebook>http://www.facebook.com/damianmarley</facebook>
-			<skype>d.marley</skype>
-			<twitter>damianmarley</twitter>
+			<googlemaps longitude="47.497271" latitude="8.21171"/>
+			<skype>c.colicchio</skype>
+			<twitter>ccolicchio</twitter>
 		</person>
 	</persons>
 	
 	<projects>
 		<project>
 			<name>Evaluation foo</name>
-			<duration unit="day">5</duration>
+			<duration unit="day">50</duration>
 			<members>
 				<personRef idRef="1"/>
 				<personRef idRef="2"/>
@@ -129,7 +112,7 @@
 		</project>
 		<project>
 			<name>Interne Umstrukturierung</name>
-			<duration unit="day">10</duration>
+			<duration unit="day">100</duration>
 			<members>
 				<personRef idRef="2"/>
 				<personRef idRef="3"/>
@@ -141,7 +124,7 @@
 		</project>
 		<project>
 			<name>Tool foo</name>
-			<duration unit="day">20</duration>
+			<duration unit="day">200</duration>
 			<members>
 				<personRef idRef="1"/>
 				<personRef idRef="3"/>

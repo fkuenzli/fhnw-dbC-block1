@@ -5,6 +5,7 @@
  * Written by Fabian Kuenzli
  * University of Applied Sciences of Northwestern Switzerland, FHNW
  * Computer Science, iCompetence
+ * fabian.kuenzli@gmail.com
  * (c) 2013
 
 -->
@@ -27,6 +28,7 @@
 
 		<html>
 			<head>
+				<title>ZHAW Personenregister</title>
 				<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 				<link href="css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
 				<link href="css/style.css" rel="stylesheet"/>
@@ -38,9 +40,9 @@
 						<h1><img src="img/zhaw_logo.png" alt="ZHAW Logo"/>ZHAW Personenregister</h1>
 						<table class="table table-striped">
 							<tr>
-								<th>Name</th>
 								<th></th>
-								<th>Social Media</th>
+								<th>Name</th>
+								<th>Web &#38; Social Media</th>
 								<th>Skype</th>
 								<th>Adresse</th>
 								<th>Projekte</th>
@@ -49,14 +51,15 @@
 							<xsl:for-each select="d:zhaw/d:persons/d:person">
 								<tr>
 									<td>
-										<a href="mailto:{d:email}"><xsl:value-of select="d:firstname"/> <xsl:value-of select="d:lastname"/></a>
+										<a href="mailto:{d:email}"><xsl:value-of select="d:lastname"/>&#160;<xsl:value-of select="d:firstname"/></a>
 									</td>
 									<td>
 										<img class="img-thumbnail" src="{/d:zhaw/d:configuration/d:images/d:url}{d:kuerzel}.{/d:zhaw/d:configuration/d:images/d:fileextension}" width="{/d:zhaw/d:configuration/d:images/d:width}" height="{/d:zhaw/d:configuration/d:images/d:height}"/>
 									</td>
 									<td>
-										<a href="https://twitter.com/{d:twitter}"><span class="glyphicon glyphicon-link"></span> twitter (@<xsl:value-of select="d:twitter"/>)</a><br />
-										<a href="{d:facebook}"><span class="glyphicon glyphicon-link"></span> Facebook</a>
+										<a href="{d:website}" target="_blank"><span class="glyphicon glyphicon-link"></span> Web</a><br />
+										<a href="https://twitter.com/{d:twitter}" target="_blank"><span class="glyphicon glyphicon-link"></span> twitter (@<xsl:value-of select="d:twitter"/>)</a><br />
+										<a href="https://www.facebook.com/search/str/{d:firstname}%20{d:lastname}/users-named" target="_blank"><span class="glyphicon glyphicon-link"></span> Facebook</a>
 									</td>
 									<td>
 										<a href="skype:{d:skype}"><span class="glyphicon glyphicon-earphone"></span>&#160;<xsl:value-of select="d:skype"/></a>
